@@ -25,14 +25,26 @@
         </a>
       </header>
       <main>
-        <textarea placeholder="Digite seu texto"></textarea>
+        <textarea
+          type="text"
+          id="cachorro"
+          placeholder="Digite seu texto"
+        ></textarea>
         <p class="info">
           <img src="./assets/icons/info.png" />
           Apenas letras minúsculas e sem acento.
         </p>
         <div class="acoes">
-          <button class="button criptografar">Criptografar</button>
-          <button class="button descriptografar">Descriptografar</button>
+          <button
+            type="button"
+            onclick="criptografa()"
+            class="button criptografar"
+          >
+            Criptografar
+          </button>
+          <button type="button" class="button descriptografar">
+            Descriptografar
+          </button>
         </div>
       </main>
     </div>
@@ -43,6 +55,15 @@
       />
       <h2>Nenhuma mensagem encontrada</h2>
       <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+      <span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, a
+        aperiam quas hic tempore, odio, voluptatem amet porro deleniti cum
+        nulla! Doloremque, maiores iste? Dolores sed unde cum nihil dolore.
+      </span>
+
+      <button type="button" class="button copiar">Copiar</button>
     </aside>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
