@@ -79,6 +79,7 @@ main textarea{
   border: none;
   outline: none;
   resize: none;
+  text-transform: lowercase;
 }
 
 main textarea::placeholder{
@@ -108,7 +109,7 @@ main textarea::placeholder{
 }
 
 aside{
-  width: 400px;
+  max-width: 400px;
   height: auto;
   background: var(--white);
   border-radius: 2rem;
@@ -116,7 +117,8 @@ aside{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-right: 20px;
+  margin-right: 10px;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
 
 aside img{
@@ -147,12 +149,17 @@ aside p{
   display: none;
 }
 
-aside span{
+#copiar{
+  margin-bottom: 2rem;
+}
+
+#resultado{
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 150%;
   color: var(--gray-400);
-  padding: 0 2rem;
+  padding: 0 1rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -167,6 +174,12 @@ aside span{
   border-radius: 24px;
   border: none;
   cursor: pointer;
+}
+
+.desabilitado{
+  background: var(--light-blue-300);
+  color: var(--gray-500);
+  cursor: not-allowed;
 }
 
 .criptografar{
@@ -195,5 +208,11 @@ aside span{
   background: var(--white);
   color: var(--dark-blue-300);
   border: 1px solid var(--dark-blue-300);
-  margin: 0 2rem;
+  margin: 0 14px;
+}
+
+.copiar:hover{
+  background: #D8DFE8;
+  border: 1px solid var(--dark-blue-300);
+  transition: all ease .5s;
 }

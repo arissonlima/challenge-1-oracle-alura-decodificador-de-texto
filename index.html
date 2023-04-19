@@ -11,6 +11,11 @@
       rel="stylesheet"
     />
     <title>Decodificador de textos | Oracle + Alura</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/favicon.png"
+      type="image/png"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -25,11 +30,7 @@
         </a>
       </header>
       <main>
-        <textarea
-          type="text"
-          id="cachorro"
-          placeholder="Digite seu texto"
-        ></textarea>
+        <textarea type="text" placeholder="Digite seu texto"></textarea>
         <p class="info">
           <img src="./assets/icons/info.png" />
           Apenas letras minúsculas e sem acento.
@@ -37,12 +38,20 @@
         <div class="acoes">
           <button
             type="button"
-            onclick="criptografa()"
-            class="button criptografar"
+            onclick="criptografar()"
+            class="button desabilitado"
+            id="botaoCripto"
+            disabled
           >
             Criptografar
           </button>
-          <button type="button" class="button descriptografar">
+          <button
+            onclick="descriptografar()"
+            type="button"
+            class="button desabilitado"
+            id="botaoDescripto"
+            disabled
+          >
             Descriptografar
           </button>
         </div>
@@ -55,13 +64,22 @@
       />
       <h2>Nenhuma mensagem encontrada</h2>
       <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
-      <span>
+      <span id="resultado">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, a
         aperiam quas hic tempore, odio, voluptatem amet porro deleniti cum
         nulla! Doloremque, maiores iste? Dolores sed unde cum nihil dolore.
       </span>
 
-      <button type="button" class="button copiar">Copiar</button>
+      <footer>
+        <button
+          id="copiar"
+          onclick="copiar()"
+          type="button"
+          class="button copiar"
+        >
+          Copiar
+        </button>
+      </footer>
     </aside>
 
     <script src="./js/script.js"></script>
